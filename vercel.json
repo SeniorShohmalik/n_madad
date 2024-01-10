@@ -1,16 +1,14 @@
 {
-  "version": 2,
   "builds": [
     {
-      "src": "project/wsgi.py",
-      "use": "@vercel/python",
-      "config": { "maxLambdaSize": "25mb" ,"runtime":"python3.10"}
+      "src": "project/asgi.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "project/wsgi.py"
+      "dest": "project/asgi.py"
     }
   ]
 }
